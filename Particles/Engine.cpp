@@ -10,56 +10,56 @@ Engine::Engine() {
 void Engine::run()
 {
 	Clock clock;
-	Particle particle();
-	while (m_Window.isOpen())
-	{
-		clock.restart();
-		Time currentSec = clock.getElapsedTime();
-		currentSec.asSeconds();
-		input();
-		update;
-		draw;
-	}
+	cout << "Starting Particle unit tests..." << endl;
+    	Particle p(m_Window, 4, { (int)m_Window.getSize().x / 2, (int)m_Window.getSize().y / 2 });
+    	p.unitTests();
+    	cout << "Unit tests complete.  Starting engine..." << endl;
+    	while (m_Window.isOpen())
+    	{
+        	Time dt = clock.restart();
+        	float dtAsSeconds = dt.asSeconds();
+        	input();
+        	update(dtAsSeconds);
+        	draw();
+    	}
 }
 
 void Engine::input()
 {
-	RenderTarget target();
-	Event event;
-	while (m_Window.pollEvent(event))
-	{
-		if (event.type == Event::Closed || event.type == sf::Keyboard::Scan::Escape	)
-		{
-			m_Window.close();
-		}
-		if (event.type == sf::Mouse::Left)
-		{
-			for (int i = 0; i < 5; i++)
-			{
-				random_device rd;
-				mt19937 gen(rd());
-				uniform_int_distribution<> disrt(25, 50);
-				m_particles.emplace_back(m_Window, disrt, sf::Mouse::getPosition(m_Window));
-			}
-		}
-	}
+	sf::Event event;
+    while (m_Window.pollEvent(event))
+    {
+        if (event.type == sf::Event::Closed)
+        {
+            m_Window.close();
+        }
+        else if (event.type == sf::Event::MouseButtonPressed)
+        {
+            if (event.mouseButton.button == sf::Mouse::Left)
+            {
+                // Add new particle at mouse position
+                for (int i = 0; i < 5; i++) {
+                    int rnd = rand() % 51 + 20;
+                    m_particles.emplace_back(m_Window, rnd, sf::Mouse::getPosition(m_Window));
+                }
+            }
+        }
+        else if (event.type == sf::Event::KeyPressed)
+        {
+            if (event.key.code == sf::Keyboard::Escape)
+            {
+                m_Window.close();
+            }
+        }
+    }
 }
 
 void Engine::update(float dtAsSeconds)
 {
-	vector<Particle>::iterator iter;
-	for (iter = m_particles.begin(); iter != m_particles.end();)
-	{
-		if (iter->getTTL() > 0.0)
-		{
-			iter->update(dtAsSeconds);
-			iter++;
-		}
-		else
-		{
-			m_particles.erase(iter);
-		}
-	}
+	for (auto& particle : m_particles)
+    	{
+		particle.update(dtAsSeconds);
+    	}
 }
 
 void Engine::draw()
