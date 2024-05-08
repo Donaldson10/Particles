@@ -1,0 +1,51 @@
+﻿  Engine.cpp
+C:\Users\yegor\source\repos\Particles\Particle.h(8,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'Engine.cpp')
+  
+  main.cpp
+C:\Users\yegor\source\repos\Particles\Engine.cpp(20,9): error C3867: 'Engine::update': non-standard syntax; use '&' to create a pointer to member
+C:\Users\yegor\source\repos\Particles\Engine.cpp(21,7): error C3867: 'Engine::draw': non-standard syntax; use '&' to create a pointer to member
+C:\Users\yegor\source\repos\Particles\Particle.h(8,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'main.cpp')
+  
+  Particle.cpp
+C:\Users\yegor\source\repos\Particles\Particle.h(8,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'Particle.cpp')
+  
+C:\Users\yegor\source\repos\Particles\Particle.cpp(152,29): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(152,29): warning C4244:         with
+C:\Users\yegor\source\repos\Particles\Particle.cpp(152,29): warning C4244:         [
+C:\Users\yegor\source\repos\Particles\Particle.cpp(152,29): warning C4244:             T=float
+C:\Users\yegor\source\repos\Particles\Particle.cpp(152,29): warning C4244:         ]
+C:\Users\yegor\source\repos\Particles\Particle.cpp(153,29): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(153,29): warning C4244:         with
+C:\Users\yegor\source\repos\Particles\Particle.cpp(153,29): warning C4244:         [
+C:\Users\yegor\source\repos\Particles\Particle.cpp(153,29): warning C4244:             T=float
+C:\Users\yegor\source\repos\Particles\Particle.cpp(153,29): warning C4244:         ]
+C:\Users\yegor\source\repos\Particles\Particle.cpp(176,61): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(180,57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(180,46): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(180,46): warning C4244:         with
+C:\Users\yegor\source\repos\Particles\Particle.cpp(180,46): warning C4244:         [
+C:\Users\yegor\source\repos\Particles\Particle.cpp(180,46): warning C4244:             T=unsigned int
+C:\Users\yegor\source\repos\Particles\Particle.cpp(180,46): warning C4244:         ]
+C:\Users\yegor\source\repos\Particles\Particle.cpp(186,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(187,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(191,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(194,22): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(214,99): warning C4244: 'argument': conversion from 'const double' to 'T', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(214,99): warning C4244:         with
+C:\Users\yegor\source\repos\Particles\Particle.cpp(214,99): warning C4244:         [
+C:\Users\yegor\source\repos\Particles\Particle.cpp(214,99): warning C4244:             T=float
+C:\Users\yegor\source\repos\Particles\Particle.cpp(214,99): warning C4244:         ]
+C:\Users\yegor\source\repos\Particles\Particle.cpp(214,84): warning C4244: 'argument': conversion from 'const double' to 'T', possible loss of data
+C:\Users\yegor\source\repos\Particles\Particle.cpp(214,84): warning C4244:         with
+C:\Users\yegor\source\repos\Particles\Particle.cpp(214,84): warning C4244:         [
+C:\Users\yegor\source\repos\Particles\Particle.cpp(214,84): warning C4244:             T=float
+C:\Users\yegor\source\repos\Particles\Particle.cpp(214,84): warning C4244:         ]
+  Source.cpp
+  Generating Code...
+C:\Users\yegor\source\repos\Particles\Source.cpp(87,1): error C4700: uninitialized local variable 'countervar1' used
+C:\Users\yegor\source\repos\Particles\Source.cpp(65,1): error C4700: uninitialized local variable 'countervar1' used
+C:\Users\yegor\source\repos\Particles\Source.cpp(88,1): error C4700: uninitialized local variable 'countervar2' used
+C:\Users\yegor\source\repos\Particles\Source.cpp(66,1): error C4700: uninitialized local variable 'countervar2' used
