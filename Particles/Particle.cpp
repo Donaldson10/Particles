@@ -1,4 +1,4 @@
-#include "Particle-2.h"
+#include "Particle.h"
 
 
 bool Particle::almostEqual(double a, double b, double eps)
